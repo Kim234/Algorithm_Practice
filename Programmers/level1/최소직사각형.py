@@ -22,3 +22,7 @@ def solution(sizes):
     max_sizes_width = sorted(sizes,key=lambda size:size[0], reverse=True)[0][0]
     max_sizes_length = sorted(sizes,key=lambda size:size[1], reverse=True)[0][1]
     return max_sizes_width*max_sizes_length
+
+#다른사람 코드 -- 가장 최대 사이즈 * 최소 중 최대 사이즈(ex)[10,20],[15,30] --> 30 x (10,15)중 최소 10)
+# def solution(sizes):
+#     return max(max(x) for x in sizes) * max(min(x) for x in sizes)
