@@ -18,7 +18,7 @@ def solution(scoville, K):
             
     else: return -1
 
-# 효율성 테스트 실패
+# 효율성 테스트 실패 
 # def solution(scoville, K):
 #     answer = 0
 #     while min(scoville)<K:
