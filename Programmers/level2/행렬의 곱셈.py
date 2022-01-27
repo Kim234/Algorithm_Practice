@@ -21,3 +21,6 @@ def solution(arr1, arr2):
 
 # a=[[1,2],[3,4]]
 # print(list(zip(*a))) --> [[1,3],[2,4]]
+# * <<- unzip 함수: zip을 풀어주는 함수 아래 예시와 유사
+# print(list(zip(*[('Alice', 'Bob'),('Anna', 'Jon')]))) 
+# [('Alice', 'Anna'), ('Bob', 'Jon')]
