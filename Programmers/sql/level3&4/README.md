@@ -113,5 +113,70 @@ CROSS JOIN 테이블2
 
 <br>
 
+#### <응용> 3개 테이블 이상 JOIN
+
+inner 조인
+
+```sh
+
+test1 : a  b
+        1  2
+        2  3
+        3  4
+
+test2 : b  c
+        2  5
+        4  6
+
+test3 : b  d
+        4  6
+        7  8
+
+SELECT * 
+FROM test1 
+JOIN test2 
+ON test1.b=test2.b 
+JOIN test3 
+ON test2.b = test3.b
+
+-- 결과
+a b b c b d
+3 4 4 6 4 6
+```
+
+left && right join
+
+```sh
+test1 : a  b
+        1  2
+        2  3
+        3  4
+
+test2 : b  c
+        2  5
+        4  6
+
+test3 : b  d
+        4  6
+        7  8
+
+SELECT *
+FROM test1
+right JOIN test2
+ON test1.b = test2.b
+right JOIN test3
+ON test2.b = test3.b
+
+-- 결과
+a b b c b d
+3 4 4 6 4 6
+n n n n 7 8
+
+n = null
+
+```
+<br>
+<br>
+
 ## 출처
-https://doh-an.tistory.com/30
+https://doh-an.tistory.com/30, https://pooney.tistory.com/37
