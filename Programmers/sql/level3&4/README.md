@@ -42,7 +42,7 @@ NATURAL JOIN 테이블2
 
 <br>
 
-## 3. 전체 외부 조인(Full Outer Join)
+### 3. 전체 외부 조인(Full Outer Join)
 
 ```sh
 SELECT 조회할 컬럼
