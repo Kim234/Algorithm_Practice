@@ -26,13 +26,14 @@ def solution(s):
 
 # 다른 사람 풀이 - Counter와 정규식 이용
 # \d: 숫자 [0-9]와 같다    +:반복을 의미 ex) 111: 111이 1개 // 없다면, 111: 1이 3개
+import re
+from collections import Counter
 def solution(s):
 
     s = Counter(re.findall('\d+', s))
     return list(map(int, [k for k, v in sorted(s.items(), key=lambda x: x[1], reverse=True)]))
 
-import re
-from collections import Counter
+
 
 # 다른 사람 풀이 2 - 내 풀이와 유사하지만, 파싱을 잘함
 # lstrip, rstrip 왼쪽,오른쪽 문자열 끝에 해당하는 문자 지워줌
